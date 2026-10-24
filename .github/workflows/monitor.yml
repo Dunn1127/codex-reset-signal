@@ -1,6 +1,9 @@
 name: Monitor X for reset
 
 on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/monitor.yml', 'scripts/smtp-monitor.mjs']
   workflow_dispatch:
     inputs:
       test_email:
@@ -14,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: reset-signal-monitor
+  group: smtp-reset-monitor-${{ github.repository }}
   cancel-in-progress: false
 
 jobs:
