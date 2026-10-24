@@ -2,6 +2,11 @@ name: Monitor X for reset
 
 on:
   workflow_dispatch:
+    inputs:
+      test_email:
+        description: Send a labelled test email instead of monitoring
+        type: boolean
+        default: false
   schedule:
     - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
 
@@ -26,7 +31,7 @@ jobs:
       BOOTSTRAP_NOTIFY: "false"
       TARGET_TIMEZONE: ${{ vars.TARGET_TIMEZONE || 'Asia/Shanghai' }}
       SOURCE_TIMEZONE: ${{ vars.SOURCE_TIMEZONE }}
-      INCLUDE_MENTIONS: ${{ vars.INCLUDE_MENTIONS || 'true' }}
+      INCLUDE_MENTIONS: ${{ vars.INCLUDE_MENTIONS || 'false' }}
       WEBHOOK_DEBUG: ${{ vars.WEBHOOK_DEBUG || 'false' }}
       STATE_PATH: runtime/state.json
       PUBLIC_STATUS_PATH: runtime/status.json
@@ -35,7 +40,7 @@ jobs:
       DISCORD_WEBHOOK_URLS: ${{ secrets.DISCORD_WEBHOOK_URLS }}
       WEBHOOK_URLS: ${{ secrets.WEBHOOK_URLS }}
       WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
-      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
       EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
       TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
@@ -60,9 +65,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Test SMTP delivery
+        if: inputs.test_email == true
+        run: node --import tsx scripts/smtp-monitor.mjs --test-email
       - name: Run monitor
+        if: inputs.test_email != true
         id: monitor
-        run: npm run monitor
+        run: node --import tsx scripts/smtp-monitor.mjs
       - name: Publish GitHub Actions summary
         if: always() && steps.monitor.outcome != 'skipped'
         run: node scripts/actions-summary.mjs
