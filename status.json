@@ -1,15 +1,20 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T10:42:20.327Z",
+  "updatedAt": "2026-10-24T11:51:58.989Z",
   "username": "thsottiaux",
   "keyword": "reset",
   "monitor": {
     "provider": "fxembed",
-    "lastCheckedAt": null,
-    "lastSuccessAt": null,
-    "lastRunStatus": "failed-1"
+    "lastCheckedAt": "2026-10-24T11:51:58.987Z",
+    "lastSuccessAt": "2026-10-24T11:51:58.987Z",
+    "lastRunStatus": "bootstrapped"
   },
-  "latestObservedPost": null,
+  "latestObservedPost": {
+    "id": "2113838156193894447",
+    "text": "The difference between having a tool and being a tool is subtle these days and it’s easy to accidentally build yourself into being a tool. Don’t be a tool.",
+    "url": "https://x.com/thsottiaux/status/2113838156193894447",
+    "postCreatedAt": "2026-10-24T03:41:04.000Z"
+  },
   "latest": {
     "reset": null,
     "bankCredit": {
