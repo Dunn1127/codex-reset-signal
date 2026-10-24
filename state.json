@@ -3,11 +3,11 @@
   "username": "thsottiaux",
   "keyword": "reset",
   "userId": "1953337039510003712",
-  "sinceId": "2113838156193894447",
-  "lastCheckedAt": "2026-10-24T15:51:35.771Z",
-  "lastSuccessAt": "2026-10-24T15:51:35.771Z",
-  "lastRunStatus": "checked-0-posts",
-  "postsScanned": 20,
+  "sinceId": "2114037527598576003",
+  "lastCheckedAt": "2026-10-24T18:45:39.651Z",
+  "lastSuccessAt": "2026-10-24T18:45:39.651Z",
+  "lastRunStatus": "checked-2-posts",
+  "postsScanned": 22,
   "matches": [],
   "outbox": [],
   "seen": {
@@ -30,14 +30,16 @@
     "2113770573994299544": "bf703ca68b6b9c4d775e1c590d2e7939f7b30464140a7266912c18f49ea3cee6",
     "2113770862860222611": "3e97cf1017c0fcdc8b1c57eb7edbd078d1c5a63536cd3a21f54fd7ad0771b003",
     "2113771215433392478": "34fc728815b9f0ec36360230a3f6abc635b527f78b21a5af70543288a9ff6795",
-    "2113838156193894447": "05dc0fb389d15d4ff59fdd7b233eaa00727e301a3a05a8d02897277fc69796eb"
+    "2113838156193894447": "05dc0fb389d15d4ff59fdd7b233eaa00727e301a3a05a8d02897277fc69796eb",
+    "2114030784625647855": "d1e9efb0ffdb5f1a864e647a828a7cd63029d9c5532e7154e80dc1b5bbff2d18",
+    "2114037527598576003": "d48c46ed0bb6aee4ed0101933f9e465c576ba6a7f7fd9bfacf76cd5f928ef983"
   },
   "latestObservedPost": {
-    "id": "2113838156193894447",
-    "canonicalId": "2113838156193894447",
-    "text": "The difference between having a tool and being a tool is subtle these days and it’s easy to accidentally build yourself into being a tool. Don’t be a tool.",
-    "createdAt": "2026-10-24T03:41:04.000Z",
-    "url": "https://x.com/thsottiaux/status/2113838156193894447",
+    "id": "2114037527598576003",
+    "canonicalId": "2114037527598576003",
+    "text": "@vishalsingh2972 One day",
+    "createdAt": "2026-10-24T16:53:18.000Z",
+    "url": "https://x.com/thsottiaux/status/2114037527598576003",
     "media": []
   },
   "eventParserVersion": 5
