@@ -1,18 +1,67 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "1970-01-01T00:00:00.000Z",
+  "updatedAt": "2026-10-24T10:42:20.327Z",
   "username": "thsottiaux",
   "keyword": "reset",
   "monitor": {
     "provider": "fxembed",
     "lastCheckedAt": null,
     "lastSuccessAt": null,
-    "lastRunStatus": "waiting-for-first-run"
+    "lastRunStatus": "failed-1"
   },
+  "latestObservedPost": null,
   "latest": {
     "reset": null,
-    "bankCredit": null,
+    "bankCredit": {
+      "version": "history:2096035437299237298",
+      "id": "2096035437299237298",
+      "text": "Because we are beyond happy to have Astra rolled out today ahead of schedule and you have been super patient with us (not really, but it’s ok!)… we will do the full banked reset today too for all Plus, Pro and Business users. Lands end of day. Happy Astra day and enjoy a phenomenal weekend. PS: If you create the account or upgrade before 8pm PT you will get it too. Still time!",
+      "url": "https://x.com/thsottiaux/status/2096035437299237298",
+      "postCreatedAt": "2026-09-05T00:39:25.364Z",
+      "detectedAt": "2026-09-09T08:30:00.000Z",
+      "events": [
+        {
+          "type": "bank_credit",
+          "status": "announced",
+          "evidence": "we will do the full banked reset today too for all Plus, Pro and Business users",
+          "time": {
+            "kind": "unknown",
+            "start": null,
+            "end": null,
+            "evidence": "Lands end of day",
+            "note": "Banked reset was promised by end of day, but no safe exact landing time is stated. The separate 8pm PT time is an eligibility cutoff for account creation or upgrade, not the bank-credit landing time."
+          }
+        }
+      ],
+      "deliveryChannels": [],
+      "origin": "historical_seed"
+    },
     "bankExpiry": null
   },
-  "recent": []
+  "recent": [
+    {
+      "version": "history:2096035437299237298",
+      "id": "2096035437299237298",
+      "text": "Because we are beyond happy to have Astra rolled out today ahead of schedule and you have been super patient with us (not really, but it’s ok!)… we will do the full banked reset today too for all Plus, Pro and Business users. Lands end of day. Happy Astra day and enjoy a phenomenal weekend. PS: If you create the account or upgrade before 8pm PT you will get it too. Still time!",
+      "url": "https://x.com/thsottiaux/status/2096035437299237298",
+      "postCreatedAt": "2026-09-05T00:39:25.364Z",
+      "detectedAt": "2026-09-09T08:30:00.000Z",
+      "events": [
+        {
+          "type": "bank_credit",
+          "status": "announced",
+          "evidence": "we will do the full banked reset today too for all Plus, Pro and Business users",
+          "time": {
+            "kind": "unknown",
+            "start": null,
+            "end": null,
+            "evidence": "Lands end of day",
+            "note": "Banked reset was promised by end of day, but no safe exact landing time is stated. The separate 8pm PT time is an eligibility cutoff for account creation or upgrade, not the bank-credit landing time."
+          }
+        }
+      ],
+      "deliveryChannels": [],
+      "origin": "historical_seed"
+    }
+  ]
 }
