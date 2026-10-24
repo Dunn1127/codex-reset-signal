@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-24T18:45:39.654Z",
+  "updatedAt": "2026-10-24T22:26:25.821Z",
   "username": "thsottiaux",
   "keyword": "reset",
   "monitor": {
     "provider": "fxembed",
-    "lastCheckedAt": "2026-10-24T18:45:39.651Z",
-    "lastSuccessAt": "2026-10-24T18:45:39.651Z",
-    "lastRunStatus": "checked-2-posts"
+    "lastCheckedAt": "2026-10-24T22:26:25.817Z",
+    "lastSuccessAt": "2026-10-24T22:26:25.817Z",
+    "lastRunStatus": "checked-4-posts"
   },
   "latestObservedPost": {
-    "id": "2114037527598576003",
-    "text": "@vishalsingh2972 One day",
-    "url": "https://x.com/thsottiaux/status/2114037527598576003",
-    "postCreatedAt": "2026-10-24T16:53:18.000Z"
+    "id": "2114086171907428846",
+    "text": "@specialkdelslay Fortunately, this is fake",
+    "url": "https://x.com/thsottiaux/status/2114086171907428846",
+    "postCreatedAt": "2026-10-24T20:06:35.000Z"
   },
   "latest": {
     "reset": null,
