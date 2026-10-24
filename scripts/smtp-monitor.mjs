@@ -2,7 +2,8 @@ import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
 import { pathToFileURL } from 'node:url';
 import { loadConfig, validateConfig } from '../src/config.ts';
-import { createTargets, renderEmail, renderText } from '../src/notifications.ts';
+import { createTargets } from '../src/notifications.ts';
+import { DateTime } from 'luxon';
 import { runMonitor } from '../src/monitor.ts';
 
 // Use the runner's Python standard library for SMTP; no additional npm package.
@@ -46,6 +47,40 @@ export function smtpSettings(env = process.env) {
   return { recipient, sender, python: env.PYTHON_EXECUTABLE || 'python3' };
 }
 
+const beijing = value => {
+  const date = DateTime.fromISO(value || '', { setZone: true }).setZone('Asia/Shanghai');
+  return date.isValid ? date.toFormat('yyyy-MM-dd HH:mm') : null;
+};
+export function expectedTime(event) {
+  const time = event.time || {};
+  const start = beijing(time.start), end = beijing(time.end);
+  const label = event.type === 'bank_expiry' ? '预计到期' : event.type === 'bank_credit' ? '预计发放' : '预计更新／重置';
+  if (time.kind === 'observed' || !start || time.kind === 'unknown')
+    return `${label}时间：未明确${event.status === 'completed' ? '；公告已宣布完成，但未给出实际到账时刻' : ''}`;
+  if (time.kind === 'date')
+    return `${label}日期范围（北京时间）：${start} ～ ${end || '未知'}（未指定具体时刻，结束边界不含）`;
+  if (time.kind === 'window')
+    return `${label}时间范围（北京时间）：${start} ～ ${end || '未知'}`;
+  const deadline = /\b(?:by|before)\b/i.test(time.evidence || '') || /截止/.test(time.note || '');
+  const approximate = /\b(?:around|about|approximately)\b/i.test(event.evidence + ' ' + (time.evidence || ''));
+  return `${label}${deadline ? '截止时间' : '时间'}（北京时间）：${approximate ? '约 ' : ''}${start}${deadline ? ' 前（不是保证到账时刻）' : ''}`;
+}
+export function renderBeijingEmail(item) {
+  const labels = { reset: '额度重置', bank_credit: '重置卡发放', bank_expiry: '重置卡到期', mention: '未确认讨论' };
+  const lines = ['Codex 额度更新通知', '以下时间均为北京时间（UTC+8）。', ''];
+  for (const event of item.events) {
+    lines.push(`${labels[event.type] || '更新'}：${event.status === 'completed' ? '已宣布完成' : '公告／预告'}`, expectedTime(event));
+    if (event.time?.note && event.time.kind !== 'observed') lines.push(`时间说明：${event.time.note}`);
+    if (event.time?.evidence) lines.push(`时间依据：${event.time.evidence}`);
+    lines.push('');
+  }
+  if (!item.events.length) lines.push('预计更新／重置时间：未明确', '');
+  lines.push(`公告发布时间（仅供参考）：${beijing(item.post.createdAt) || '未知'}`, '', '公告原文：', item.post.text, '', `原文链接：${item.post.url}`);
+  const text = lines.join('\n');
+  const escaped = text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
+  return { text, html: `<!doctype html><html><body><pre style="white-space:pre-wrap;font-family:Arial,sans-serif;line-height:1.6">${escaped}</pre></body></html>` };
+}
+
 export function createSmtpTarget(settings, config, execute = spawnSync) {
   const digest = value => createHash('sha256').update(value).digest('hex');
   const send = async data => {
@@ -63,8 +98,7 @@ export function createSmtpTarget(settings, config, execute = spawnSync) {
       await send({
         sender: settings.sender, recipient: settings.recipient,
         subject: `Codex 重置通知 · @${config.username}`,
-        text: renderText(item.post, item.events, config.timezone),
-        html: renderEmail(item.post, config.username, config.keyword, item.events, config.timezone),
+        ...renderBeijingEmail(item),
         messageId: `<codex-reset-${digest(item.key + ':' + settings.recipient)}@163.com>`,
       });
     },
@@ -72,7 +106,7 @@ export function createSmtpTarget(settings, config, execute = spawnSync) {
       await send({
         sender: settings.sender, recipient: settings.recipient,
         subject: 'Codex 重置通知：163 邮件通道测试',
-        text: '这是一封部署测试邮件，不代表发生了额度重置。\n后续检测到新的重置公告或重置卡消息时，将通过此邮箱通知。时间使用北京时间。',
+        text: '这是一封配置测试邮件，不代表发生了额度重置。\n检查频率已调整为每 2 小时一次。\n\n格式示例（虚构）：\n预计更新／重置时间（北京时间）：2026-10-25 09:00\n公告发布时间（仅供参考）：2026-10-25 07:00\n\n只有公告提供了可解析的时间才会换算；范围、截止时间和不确定性会保留。',
         messageId: `<codex-reset-test-${digest(process.env.GITHUB_RUN_ID || String(Date.now()))}@163.com>`,
       });
     },
