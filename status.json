@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T11:17:12.256Z",
+  "updatedAt": "2026-10-25T16:06:25.448Z",
   "username": "thsottiaux",
   "keyword": "reset",
   "monitor": {
     "provider": "fxembed",
-    "lastCheckedAt": "2026-10-25T11:17:11.919Z",
-    "lastSuccessAt": "2026-10-25T11:17:11.919Z",
-    "lastRunStatus": "checked-1-posts"
+    "lastCheckedAt": "2026-10-25T16:06:25.327Z",
+    "lastSuccessAt": "2026-10-25T16:06:25.327Z",
+    "lastRunStatus": "checked-2-posts"
   },
   "latestObservedPost": {
-    "id": "2114237441250828563",
-    "text": "@ScriptedAlchemy .com",
-    "url": "https://x.com/thsottiaux/status/2114237441250828563",
-    "postCreatedAt": "2026-10-25T06:07:41.000Z"
+    "id": "2114365873049993364",
+    "text": "@theo Love to see it!!",
+    "url": "https://x.com/thsottiaux/status/2114365873049993364",
+    "postCreatedAt": "2026-10-25T14:38:01.000Z"
   },
   "latest": {
     "reset": {
