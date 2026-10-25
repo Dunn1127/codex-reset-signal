@@ -20,6 +20,7 @@ type Dependencies = {
   /** @deprecated Use source. Kept for existing integrations. */
   xClient?: PostSource;
   targets?: NotificationTarget[];
+  classifyEvents?: (post: XPost) => MatchRecord["events"];
   now?: () => Date;
 };
 
@@ -170,7 +171,7 @@ async function runLocked(config: AppConfig, deps: Dependencies): Promise<Monitor
       const version = postVersion(post);
       if (state.seen[identity] === version) continue;
       state.seen[identity] = version;
-      const events = eventsForPost(post, config);
+      const events = deps.classifyEvents ? deps.classifyEvents(post) : eventsForPost(post, config);
 
       if (events.length) {
         if (!state.matches.some((match) => match.version === version)) {
