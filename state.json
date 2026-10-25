@@ -3,11 +3,11 @@
   "username": "thsottiaux",
   "keyword": "reset",
   "userId": "1953337039510003712",
-  "sinceId": "2114365873049993364",
-  "lastCheckedAt": "2026-10-25T19:01:58.058Z",
-  "lastSuccessAt": "2026-10-25T19:01:58.058Z",
-  "lastRunStatus": "checked-1-posts",
-  "postsScanned": 39,
+  "sinceId": "2114435873857028129",
+  "lastCheckedAt": "2026-10-25T22:30:57.563Z",
+  "lastSuccessAt": "2026-10-25T22:30:57.563Z",
+  "lastRunStatus": "checked-3-posts",
+  "postsScanned": 42,
   "matches": [
     {
       "version": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
@@ -75,14 +75,16 @@
     "2114228445043691592": "8dbf1139cc31522a4bec626bbb697beabd39584ef74f629e5728244acbf21f04",
     "2114237083652882932:reset-context-v1": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
     "2114237441250828563": "95be22ce3395bad7c6df058728aa637d32831bf0793a0d3183ef566afb807461",
-    "2114365873049993364": "4498ccf874603559fbcb2ce2b64a8cd358c221869ed10a20354822876e1ae34e"
+    "2114365873049993364": "4498ccf874603559fbcb2ce2b64a8cd358c221869ed10a20354822876e1ae34e",
+    "2114435715605885396": "205beb0cedc09d77d05cdda348e3ca069830fcf8ed781b504d3692b0cf7bd991",
+    "2114435873857028129": "bdb4e613582a3a41c1a682d1ae36f2ca7b63b769e733a21a8127f8aeb4623777"
   },
   "latestObservedPost": {
-    "id": "2114365873049993364",
-    "canonicalId": "2114365873049993364",
-    "text": "@theo Love to see it!!",
-    "createdAt": "2026-10-25T14:38:01.000Z",
-    "url": "https://x.com/thsottiaux/status/2114365873049993364",
+    "id": "2114435873857028129",
+    "canonicalId": "2114435873857028129",
+    "text": "@himanshutwtxs Did you?",
+    "createdAt": "2026-10-25T19:16:11.000Z",
+    "url": "https://x.com/thsottiaux/status/2114435873857028129",
     "media": []
   },
   "eventParserVersion": 5
