@@ -3,12 +3,42 @@
   "username": "thsottiaux",
   "keyword": "reset",
   "userId": "1953337039510003712",
-  "sinceId": "2114200291319124163",
-  "lastCheckedAt": "2026-10-25T04:32:45.952Z",
-  "lastSuccessAt": "2026-10-25T04:32:45.952Z",
-  "lastRunStatus": "checked-5-posts",
-  "postsScanned": 31,
-  "matches": [],
+  "sinceId": "2114237441250828563",
+  "lastCheckedAt": "2026-10-25T08:22:55.145Z",
+  "lastSuccessAt": "2026-10-25T08:22:55.145Z",
+  "lastRunStatus": "checked-4-posts",
+  "postsScanned": 35,
+  "matches": [
+    {
+      "version": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
+      "id": "2114237083652882932",
+      "canonicalId": "2114237083652882932:reset-context-v1",
+      "text": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+      "createdAt": "2026-10-25T06:06:16.000Z",
+      "url": "https://x.com/thsottiaux/status/2114237083652882932",
+      "media": [],
+      "detectedAt": "2026-10-25T08:22:55.145Z",
+      "events": [
+        {
+          "type": "reset",
+          "status": "completed",
+          "evidence": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+          "time": {
+            "kind": "observed",
+            "start": "2026-10-25T06:06:16.000Z",
+            "end": null,
+            "evidence": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+            "note": "语境关联同作者最近的重置公告：https://x.com/thsottiaux/status/2114200152701575656；完成声明时间不是账号实际到账时间"
+          }
+        }
+      ],
+      "channels": [
+        "github-actions",
+        "email"
+      ],
+      "notifiedAt": "2026-10-25T08:22:55.150Z"
+    }
+  ],
   "outbox": [],
   "seen": {
     "2112426606870585551": "d09f4ebf49f91217eb4373f658179ae2ac17da1fb929edfb2f59aa7dd46bf136",
@@ -41,14 +71,18 @@
     "2114125878804545940": "1f762be636e3eb7e8159aabb200fd144b41700aa9c5193897142231b4f4201ec",
     "2114199013176303641": "24ef83efe450d7b02ff9457cd244c707b5e90fcfc1ca7704c8f57f0a897dc902",
     "2114200152701575656": "72f6ac530cb6d09cb0c957d3535c8768295542be3bfd44f88d1ecb0c18a872b4",
-    "2114200291319124163": "b8775d91a923e8d235a471cd4053c3cbb1e73ff22575f20b235b4e8d4ab61e2d"
+    "2114200291319124163": "b8775d91a923e8d235a471cd4053c3cbb1e73ff22575f20b235b4e8d4ab61e2d",
+    "2114228044072403055": "b9d449b7729cd88e67ea3d4e502de24abc9b87cbe3e939a8b0ef8c3126c5ce58",
+    "2114228445043691592": "8dbf1139cc31522a4bec626bbb697beabd39584ef74f629e5728244acbf21f04",
+    "2114237083652882932:reset-context-v1": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
+    "2114237441250828563": "95be22ce3395bad7c6df058728aa637d32831bf0793a0d3183ef566afb807461"
   },
   "latestObservedPost": {
-    "id": "2114200291319124163",
-    "canonicalId": "2114200291319124163",
-    "text": "By midnight PST",
-    "createdAt": "2026-10-25T03:40:04.000Z",
-    "url": "https://x.com/thsottiaux/status/2114200291319124163",
+    "id": "2114237441250828563",
+    "canonicalId": "2114237441250828563",
+    "text": "@ScriptedAlchemy .com",
+    "createdAt": "2026-10-25T06:07:41.000Z",
+    "url": "https://x.com/thsottiaux/status/2114237441250828563",
     "media": []
   },
   "eventParserVersion": 5

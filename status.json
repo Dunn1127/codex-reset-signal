@@ -1,22 +1,47 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-25T04:32:45.956Z",
+  "updatedAt": "2026-10-25T08:22:58.234Z",
   "username": "thsottiaux",
   "keyword": "reset",
   "monitor": {
     "provider": "fxembed",
-    "lastCheckedAt": "2026-10-25T04:32:45.952Z",
-    "lastSuccessAt": "2026-10-25T04:32:45.952Z",
-    "lastRunStatus": "checked-5-posts"
+    "lastCheckedAt": "2026-10-25T08:22:55.145Z",
+    "lastSuccessAt": "2026-10-25T08:22:55.145Z",
+    "lastRunStatus": "checked-4-posts"
   },
   "latestObservedPost": {
-    "id": "2114200291319124163",
-    "text": "By midnight PST",
-    "url": "https://x.com/thsottiaux/status/2114200291319124163",
-    "postCreatedAt": "2026-10-25T03:40:04.000Z"
+    "id": "2114237441250828563",
+    "text": "@ScriptedAlchemy .com",
+    "url": "https://x.com/thsottiaux/status/2114237441250828563",
+    "postCreatedAt": "2026-10-25T06:07:41.000Z"
   },
   "latest": {
-    "reset": null,
+    "reset": {
+      "version": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
+      "id": "2114237083652882932",
+      "text": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+      "url": "https://x.com/thsottiaux/status/2114237083652882932",
+      "postCreatedAt": "2026-10-25T06:06:16.000Z",
+      "detectedAt": "2026-10-25T08:22:55.145Z",
+      "events": [
+        {
+          "type": "reset",
+          "status": "completed",
+          "evidence": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+          "time": {
+            "kind": "observed",
+            "start": "2026-10-25T06:06:16.000Z",
+            "end": null,
+            "evidence": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+            "note": "语境关联同作者最近的重置公告：https://x.com/thsottiaux/status/2114200152701575656；完成声明时间不是账号实际到账时间"
+          }
+        }
+      ],
+      "deliveryChannels": [
+        "email"
+      ],
+      "origin": "live"
+    },
     "bankCredit": {
       "version": "history:2096035437299237298",
       "id": "2096035437299237298",
@@ -44,6 +69,32 @@
     "bankExpiry": null
   },
   "recent": [
+    {
+      "version": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
+      "id": "2114237083652882932",
+      "text": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+      "url": "https://x.com/thsottiaux/status/2114237083652882932",
+      "postCreatedAt": "2026-10-25T06:06:16.000Z",
+      "detectedAt": "2026-10-25T08:22:55.145Z",
+      "events": [
+        {
+          "type": "reset",
+          "status": "completed",
+          "evidence": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+          "time": {
+            "kind": "observed",
+            "start": "2026-10-25T06:06:16.000Z",
+            "end": null,
+            "evidence": "It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too. https://t.co/qOrzwSeIZZ",
+            "note": "语境关联同作者最近的重置公告：https://x.com/thsottiaux/status/2114200152701575656；完成声明时间不是账号实际到账时间"
+          }
+        }
+      ],
+      "deliveryChannels": [
+        "email"
+      ],
+      "origin": "live"
+    },
     {
       "version": "history:2096035437299237298",
       "id": "2096035437299237298",
