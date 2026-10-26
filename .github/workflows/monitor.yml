@@ -11,7 +11,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "7 */2 * * *"
+    - cron: "7 * * * *"
 
 permissions:
   contents: write
@@ -34,7 +34,7 @@ jobs:
       BOOTSTRAP_NOTIFY: "false"
       TARGET_TIMEZONE: ${{ vars.TARGET_TIMEZONE || 'Asia/Shanghai' }}
       SOURCE_TIMEZONE: ${{ vars.SOURCE_TIMEZONE }}
-      INCLUDE_MENTIONS: ${{ vars.INCLUDE_MENTIONS || 'false' }}
+      INCLUDE_MENTIONS: ${{ vars.INCLUDE_MENTIONS || 'true' }}
       WEBHOOK_DEBUG: ${{ vars.WEBHOOK_DEBUG || 'false' }}
       STATE_PATH: runtime/state.json
       PUBLIC_STATUS_PATH: runtime/status.json
