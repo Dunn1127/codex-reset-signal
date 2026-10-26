@@ -18,6 +18,24 @@ const rawRoot = asRaw(root);
 const rawTiming = { ...asRaw(timing), replying_to: { screen_name: 'thsottiaux', status: root.id } };
 const contextOptions = { userId: '123', username: 'thsottiaux' };
 describe('real split reset announcements', () => {
+  it('includes new uncertain reset messages only when enabled and labels the email clearly', async () => {
+    const post = { ...root, text: '@larsencc @bot Not enough resets' };
+    const batch = contextualBatch([post], [asRaw(post)], { ...contextOptions, includeMentions: true }, 'America/Los_Angeles');
+    const events = batch.classify(post);
+    expect(events[0].type).toBe('mention');
+    expect(renderBeijingEmail({ post, events }).text).toContain('未确认，不代表已重置');
+    const execute = vi.fn().mockReturnValue({ status: 0 });
+    await createSmtpTarget(settings, loadConfig({}), execute).send({ ...item, post, events });
+    expect(JSON.parse(execute.mock.calls[0][2].input).subject).toContain('【未确认】');
+    expect(contextualBatch([post], [asRaw(post)], contextOptions).classify(post)).toEqual([]);
+  });
+  it('recognizes the Oct 26 daily reset announcement and ignores unrelated posts', () => {
+    const post = { ...root, text: 'Day 21/ Wonder what happens the remaining seven days. But today is a reset.' };
+    const batch = contextualBatch([post], [asRaw(post)], { ...contextOptions, includeMentions: true });
+    expect(batch.classify(post)[0].type).toBe('reset');
+    const unrelated = { ...root, text: 'Reminder you can customize the appearance of chatgpt on web' };
+    expect(batch.classify(unrelated)).toEqual([]);
+  });
   it('keeps live and recovery identities identical even when live posts include media', () => {
     const raw = [rawRoot, rawTiming, asRaw(done)];
     const options = { ...contextOptions, now: Date.parse('2026-10-25T08:00:00Z') };
