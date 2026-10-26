@@ -55,15 +55,16 @@ const beijing = value => {
 };
 
 // Source-specific shorthand rules apply only to the configured announcement author.
-function announcementEvents(post, zone) {
-  const events = extractEvents(post, zone).filter(event => event.type !== 'mention');
+function announcementEvents(post, zone, includeMentions = false) {
+  const parsed = extractEvents(post, zone);
+  const events = parsed.filter(event => event.type !== 'mention');
   if (!events.length && /^Day\s+\d+\s*\//i.test(post.text) && /\breset\b/i.test(post.text)
       && !/\?|\b(?:not|never|no|maybe|might|could|would|hope|wish|if|without)\b/i.test(post.text)) {
     return [{ type: 'reset', status: 'announced', evidence: post.text,
       time: { kind: 'unknown', start: null, end: null, evidence: post.text,
         note: '同作者每日公告中的简短重置声明；尚未给出明确到账时间' } }];
   }
-  return events;
+  return includeMentions ? parsed : events;
 }
 
 function followupTime(post, zone) {
@@ -132,12 +133,12 @@ export function contextualBatch(posts, rawResults, options, zone) {
     events.set(recovered.canonicalId, completionEvents);
     events.set(post.canonicalId || post.id, completionEvents);
   }
-  return { posts: [...result.values()], classify: post => events.get(post.canonicalId || post.id) || announcementEvents(post, zone) };
+  return { posts: [...result.values()], classify: post => events.get(post.canonicalId || post.id) || announcementEvents(post, zone, options.includeMentions) };
 }
 
 function contextSource(config) {
   const raw = [];
-  let classify = post => announcementEvents(post, config.sourceTimezone);
+  let classify = post => announcementEvents(post, config.sourceTimezone, config.includeMentions);
   const client = new FxEmbedClient(async (url, options) => {
     const response = await fetch(url, options);
     if (response.ok) {
@@ -151,7 +152,7 @@ function contextSource(config) {
     async getPosts(options) {
       raw.length = 0;
       const batch = await client.getPosts(options);
-      const contextual = contextualBatch(batch.posts, raw, options, config.sourceTimezone);
+      const contextual = contextualBatch(batch.posts, raw, { ...options, includeMentions: config.includeMentions }, config.sourceTimezone);
       classify = contextual.classify;
       return { ...batch, posts: contextual.posts };
     },
@@ -175,7 +176,7 @@ export function renderBeijingEmail(item) {
   const labels = { reset: '额度重置', bank_credit: '重置卡发放', bank_expiry: '重置卡到期', mention: '未确认讨论' };
   const lines = ['Codex 额度更新通知', '以下时间均为北京时间（UTC+8）。', ''];
   for (const event of item.events) {
-    lines.push(`${labels[event.type] || '更新'}：${event.status === 'completed' ? '已宣布完成' : '公告／预告'}`, expectedTime(event));
+    lines.push(`${labels[event.type] || '更新'}：${event.status === 'uncertain' || event.type === 'mention' ? '未确认，不代表已重置' : event.status === 'completed' ? '已宣布完成' : '公告／预告'}`, expectedTime(event));
     if (event.time?.note) lines.push(`时间说明：${event.time.note}`);
     if (event.time?.evidence) lines.push(`时间依据：${event.time.evidence}`);
     lines.push('');
@@ -203,7 +204,7 @@ export function createSmtpTarget(settings, config, execute = spawnSync) {
     async send(item) {
       await send({
         sender: settings.sender, recipient: settings.recipient,
-        subject: `Codex 重置通知 · @${config.username}`,
+        subject: `${item.events.length && item.events.every(event => event.type === 'mention' || event.status === 'uncertain') ? 'Codex 重置相关消息【未确认】' : 'Codex 重置通知'} · @${config.username}`,
         ...renderBeijingEmail(item),
         messageId: `<codex-reset-${digest(item.key + ':' + settings.recipient)}@163.com>`,
       });
@@ -212,7 +213,7 @@ export function createSmtpTarget(settings, config, execute = spawnSync) {
       await send({
         sender: settings.sender, recipient: settings.recipient,
         subject: 'Codex 重置通知：163 邮件通道测试',
-        text: '这是一封配置测试邮件，不代表发生了额度重置。\n检查频率已调整为每 2 小时一次。\n\n格式示例（虚构）：\n预计更新／重置时间（北京时间）：2026-10-25 09:00\n公告发布时间（仅供参考）：2026-10-25 07:00\n\n只有公告提供了可解析的时间才会换算；范围、截止时间和不确定性会保留。',
+        text: '这是一封配置测试邮件，不代表发生了额度重置。\n检查频率已调整为每小时一次；新的重置相关消息会通知，不确定内容标注为未确认。\n\n只有公告提供了可解析的时间才会换算为北京时间；范围、截止时间和不确定性会保留。',
         messageId: `<codex-reset-test-${digest(process.env.GITHUB_RUN_ID || String(Date.now()))}@163.com>`,
       });
     },
