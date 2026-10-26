@@ -3,12 +3,70 @@
   "username": "thsottiaux",
   "keyword": "reset",
   "userId": "1953337039510003712",
-  "sinceId": "2114435873857028129",
-  "lastCheckedAt": "2026-10-26T04:37:54.287Z",
-  "lastSuccessAt": "2026-10-26T04:37:54.287Z",
-  "lastRunStatus": "checked-1-posts",
-  "postsScanned": 43,
+  "sinceId": "2114599388454481930",
+  "lastCheckedAt": "2026-10-26T06:59:51.239Z",
+  "lastSuccessAt": "2026-10-26T06:59:51.239Z",
+  "lastRunStatus": "checked-6-posts",
+  "postsScanned": 49,
   "matches": [
+    {
+      "version": "0ed9171ef1a5ce3545afbab8a929e6404915691424944a6d484536d78e66c1e3",
+      "id": "2114599388454481930",
+      "canonicalId": "2114599388454481930",
+      "text": "@larsencc @bot Not enough resets",
+      "createdAt": "2026-10-26T06:05:56.000Z",
+      "url": "https://x.com/thsottiaux/status/2114599388454481930",
+      "media": [],
+      "detectedAt": "2026-10-26T06:59:51.239Z",
+      "events": [
+        {
+          "type": "mention",
+          "status": "uncertain",
+          "evidence": "@larsencc @bot Not enough resets",
+          "time": {
+            "kind": "unknown",
+            "start": null,
+            "end": null,
+            "evidence": "@larsencc @bot Not enough resets",
+            "note": "讨论、请求、弱判断或否定，不代表已确认的重置"
+          }
+        }
+      ],
+      "channels": [
+        "github-actions",
+        "email"
+      ],
+      "notifiedAt": "2026-10-26T06:59:54.451Z"
+    },
+    {
+      "version": "684703fff5bf0ff96aef635fdc05aac74b5ffbb3d960bb7653f5e4b04cc9f41b",
+      "id": "2114588174249071102",
+      "canonicalId": "2114588174249071102",
+      "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+      "createdAt": "2026-10-26T05:21:22.000Z",
+      "url": "https://x.com/thsottiaux/status/2114588174249071102",
+      "media": [],
+      "detectedAt": "2026-10-26T06:59:51.238Z",
+      "events": [
+        {
+          "type": "reset",
+          "status": "announced",
+          "evidence": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+          "time": {
+            "kind": "unknown",
+            "start": null,
+            "end": null,
+            "evidence": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+            "note": "同作者每日公告中的简短重置声明；尚未给出明确到账时间"
+          }
+        }
+      ],
+      "channels": [
+        "github-actions",
+        "email"
+      ],
+      "notifiedAt": "2026-10-26T06:59:51.243Z"
+    },
     {
       "version": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
       "id": "2114237083652882932",
@@ -77,14 +135,20 @@
     "2114237441250828563": "95be22ce3395bad7c6df058728aa637d32831bf0793a0d3183ef566afb807461",
     "2114365873049993364": "4498ccf874603559fbcb2ce2b64a8cd358c221869ed10a20354822876e1ae34e",
     "2114435715605885396": "205beb0cedc09d77d05cdda348e3ca069830fcf8ed781b504d3692b0cf7bd991",
-    "2114435873857028129": "bdb4e613582a3a41c1a682d1ae36f2ca7b63b769e733a21a8127f8aeb4623777"
+    "2114435873857028129": "bdb4e613582a3a41c1a682d1ae36f2ca7b63b769e733a21a8127f8aeb4623777",
+    "2114588174249071102": "684703fff5bf0ff96aef635fdc05aac74b5ffbb3d960bb7653f5e4b04cc9f41b",
+    "2114588845874491691": "e977bb6b475d18acd7aeb39b8e31c709797d5d827300b407f659d321100ead94",
+    "2114595002210783279": "bf544ce34fc1e238e61acc579c040811c6752b90f07aaa33c3bb5b6e0ae7403c",
+    "2114598609245126731": "ef0392c1bfa6cb2286935cdbb382bb67e518aebd81eac2b6f4b8cb5da33cd093",
+    "2114598675930296518": "9e6d0a5ab6920465eaa6c1bdda004fca2656fd5fdb77dd8691472eefb07e944e",
+    "2114599388454481930": "0ed9171ef1a5ce3545afbab8a929e6404915691424944a6d484536d78e66c1e3"
   },
   "latestObservedPost": {
-    "id": "2114435873857028129",
-    "canonicalId": "2114435873857028129",
-    "text": "@himanshutwtxs Did you?",
-    "createdAt": "2026-10-25T19:16:11.000Z",
-    "url": "https://x.com/thsottiaux/status/2114435873857028129",
+    "id": "2114599388454481930",
+    "canonicalId": "2114599388454481930",
+    "text": "@larsencc @bot Not enough resets",
+    "createdAt": "2026-10-26T06:05:56.000Z",
+    "url": "https://x.com/thsottiaux/status/2114599388454481930",
     "media": []
   },
   "eventParserVersion": 5
