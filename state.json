@@ -4,15 +4,14 @@
   "keyword": "reset",
   "userId": "1953337039510003712",
   "sinceId": "2114599388454481930",
-  "lastCheckedAt": "2026-10-26T06:59:51.239Z",
-  "lastSuccessAt": "2026-10-26T06:59:51.239Z",
-  "lastRunStatus": "checked-6-posts",
+  "lastCheckedAt": "2026-10-26T14:04:14.956Z",
+  "lastSuccessAt": "2026-10-26T14:04:14.956Z",
+  "lastRunStatus": "checked-0-posts",
   "postsScanned": 49,
   "matches": [
     {
       "version": "0ed9171ef1a5ce3545afbab8a929e6404915691424944a6d484536d78e66c1e3",
       "id": "2114599388454481930",
-      "canonicalId": "2114599388454481930",
       "text": "@larsencc @bot Not enough resets",
       "createdAt": "2026-10-26T06:05:56.000Z",
       "url": "https://x.com/thsottiaux/status/2114599388454481930",
@@ -32,16 +31,15 @@
           }
         }
       ],
+      "notifiedAt": "2026-10-26T06:59:54.451Z",
       "channels": [
         "github-actions",
         "email"
-      ],
-      "notifiedAt": "2026-10-26T06:59:54.451Z"
+      ]
     },
     {
       "version": "684703fff5bf0ff96aef635fdc05aac74b5ffbb3d960bb7653f5e4b04cc9f41b",
       "id": "2114588174249071102",
-      "canonicalId": "2114588174249071102",
       "text": "Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
       "createdAt": "2026-10-26T05:21:22.000Z",
       "url": "https://x.com/thsottiaux/status/2114588174249071102",
@@ -61,11 +59,11 @@
           }
         }
       ],
+      "notifiedAt": "2026-10-26T06:59:51.243Z",
       "channels": [
         "github-actions",
         "email"
-      ],
-      "notifiedAt": "2026-10-26T06:59:51.243Z"
+      ]
     },
     {
       "version": "fc1375e6ec58f261b4ad8beabf831739b2302b9bb1285bf7e461587ca2767cdb",
