@@ -3,11 +3,11 @@
   "username": "thsottiaux",
   "keyword": "reset",
   "userId": "1953337039510003712",
-  "sinceId": "2114839845604667840",
-  "lastCheckedAt": "2026-10-26T23:41:05.452Z",
-  "lastSuccessAt": "2026-10-26T23:41:05.452Z",
+  "sinceId": "2114922374978277786",
+  "lastCheckedAt": "2026-10-27T04:34:48.963Z",
+  "lastSuccessAt": "2026-10-27T04:34:48.963Z",
   "lastRunStatus": "checked-1-posts",
-  "postsScanned": 51,
+  "postsScanned": 52,
   "matches": [
     {
       "version": "0ed9171ef1a5ce3545afbab8a929e6404915691424944a6d484536d78e66c1e3",
@@ -141,14 +141,15 @@
     "2114598675930296518": "9e6d0a5ab6920465eaa6c1bdda004fca2656fd5fdb77dd8691472eefb07e944e",
     "2114599388454481930": "0ed9171ef1a5ce3545afbab8a929e6404915691424944a6d484536d78e66c1e3",
     "2114800277677092936": "1bf88207313e0d5f78647dbb937fcfa533caa2179ef322464f9cbbfd1d4416d2",
-    "2114839845604667840": "00e13f770ea457666f8eca1e583fb11e25a7974b1d1accac1841029f3999758f"
+    "2114839845604667840": "00e13f770ea457666f8eca1e583fb11e25a7974b1d1accac1841029f3999758f",
+    "2114922374978277786": "472c6c35b088a53861a2da98f07c8233774868924713f816f5642a0a784623e2"
   },
   "latestObservedPost": {
-    "id": "2114839845604667840",
-    "canonicalId": "2114839845604667840",
-    "text": "@ZryMiller @rohit3a Lore accurate tibo",
-    "createdAt": "2026-10-26T22:01:25.000Z",
-    "url": "https://x.com/thsottiaux/status/2114839845604667840",
+    "id": "2114922374978277786",
+    "canonicalId": "2114922374978277786",
+    "text": "@TokenGremlin Interesting",
+    "createdAt": "2026-10-27T03:29:22.000Z",
+    "url": "https://x.com/thsottiaux/status/2114922374978277786",
     "media": []
   },
   "eventParserVersion": 5
