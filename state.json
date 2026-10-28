@@ -3,12 +3,42 @@
   "username": "thsottiaux",
   "keyword": "reset",
   "userId": "1953337039510003712",
-  "sinceId": "2115148258372964831",
-  "lastCheckedAt": "2026-10-28T01:04:52.562Z",
-  "lastSuccessAt": "2026-10-28T01:04:52.562Z",
-  "lastRunStatus": "checked-0-posts",
-  "postsScanned": 53,
+  "sinceId": "2115330127886463244",
+  "lastCheckedAt": "2026-10-28T06:48:01.817Z",
+  "lastSuccessAt": "2026-10-28T06:48:01.817Z",
+  "lastRunStatus": "checked-10-posts",
+  "postsScanned": 63,
   "matches": [
+    {
+      "version": "f34118e913778dca16893efc5bf0a0fe9bcfc04470af04f80739440c2b6404e5",
+      "id": "2115273064481218829",
+      "canonicalId": "2115273064481218829:timing:2115273253711409208",
+      "text": "Day 23/ Much requested iCloud Main &amp; Calendar plugins. Just kidding, today is a reset. Still much requested though!",
+      "createdAt": "2026-10-28T02:42:53.000Z",
+      "url": "https://x.com/thsottiaux/status/2115273064481218829",
+      "media": [],
+      "contextTime": "2026-10-28T02:43:38.000Z",
+      "detectedAt": "2026-10-28T06:48:01.817Z",
+      "events": [
+        {
+          "type": "reset",
+          "status": "scheduled",
+          "evidence": "Day 23/ Much requested iCloud Main &amp; Calendar plugins. Just kidding, today is a reset. Still much requested though!",
+          "time": {
+            "kind": "exact",
+            "start": "2026-10-28T08:00:00.000Z",
+            "end": null,
+            "evidence": "midnight PST",
+            "note": "时间补充原文：https://x.com/thsottiaux/status/2115273253711409208"
+          }
+        }
+      ],
+      "channels": [
+        "github-actions",
+        "email"
+      ],
+      "notifiedAt": "2026-10-28T06:48:01.822Z"
+    },
     {
       "version": "0ed9171ef1a5ce3545afbab8a929e6404915691424944a6d484536d78e66c1e3",
       "id": "2114599388454481930",
@@ -143,14 +173,24 @@
     "2114800277677092936": "1bf88207313e0d5f78647dbb937fcfa533caa2179ef322464f9cbbfd1d4416d2",
     "2114839845604667840": "00e13f770ea457666f8eca1e583fb11e25a7974b1d1accac1841029f3999758f",
     "2114922374978277786": "472c6c35b088a53861a2da98f07c8233774868924713f816f5642a0a784623e2",
-    "2115148258372964831": "279b88ab09bd67c0a117f18a57b542896019b3805a3cab9cdd78349f31e6ae53"
+    "2115148258372964831": "279b88ab09bd67c0a117f18a57b542896019b3805a3cab9cdd78349f31e6ae53",
+    "2115272201922572627": "d7a4309e06bddd420c92a4d127581eb2aa07f6f4537af5140b30feb9b0d5b317",
+    "2115273064481218829:timing:2115273253711409208": "f34118e913778dca16893efc5bf0a0fe9bcfc04470af04f80739440c2b6404e5",
+    "2115273253711409208": "bf0b229980513092e3549a6e241b4525d80a4e9011cac8e18369e692eea6ba39",
+    "2115289940233961584": "ac8de13f52c7de95a14499503e527e73dba679b2634b4f38d08a061ff88ce0a4",
+    "2115290111147712544": "7c8fe1b3f1edd06e5a3e2bfa5d922bd8a020bac22257b5fa321431945183f8c7",
+    "2115290318652444729": "0c87bd85be53ee5000a3c41d6c930da61c8a92fc292fd5402f0e0c08dc164f98",
+    "2115297093879472332": "348086deaaffe04f05f1c0a578218034b844eb460382f98ff4aefd329144af15",
+    "2115299029294920189": "2300a59f4f3c3c0f9fc6be5ec044510f8e7283fa29269d014398d3b08291dfff",
+    "2115329600897319076": "4e6b929e8003b3b57c9219338c38897363ff63d2ddd5053334ee396b376d0a98",
+    "2115330127886463244": "c5e78a303d2682f0170b5276d1f2659c413a293537d86d3a8b0827105be040e1"
   },
   "latestObservedPost": {
-    "id": "2115148258372964831",
-    "canonicalId": "2115148258372964831",
-    "text": "@BrenBuilds A sign of great things to come",
-    "createdAt": "2026-10-27T18:26:57.000Z",
-    "url": "https://x.com/thsottiaux/status/2115148258372964831",
+    "id": "2115330127886463244",
+    "canonicalId": "2115330127886463244",
+    "text": "And it's done. See you tomorrow for some good news.",
+    "createdAt": "2026-10-28T06:29:38.000Z",
+    "url": "https://x.com/thsottiaux/status/2115330127886463244",
     "media": []
   },
   "eventParserVersion": 5
